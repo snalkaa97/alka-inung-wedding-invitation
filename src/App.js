@@ -48,7 +48,7 @@ const Pages = () => {
 			{/* <Home /> */}
 			<Couple />
 			<Event />
-			<Greeting submitData={submitData} data={data} />
+			<Greeting submitData={submitData} data={data} to={to} />
 		</div>
 	);
 };
