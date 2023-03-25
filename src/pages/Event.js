@@ -2,16 +2,16 @@ import React from "react";
 
 function Event() {
 	return (
-		<div className="text-md text-center mt-7 mb-0 font-normal text-gray-300 leading-relaxed">
+		<div className="text-sm text-center mt-7 mb-0 font-normal text-gray-300 leading-relaxed">
 			<div className="text-center text-5xl mb-5">🗓️</div>
 			Yang Insya Allah akan diselenggarakan pada :
-			<div className="text-md font-extrabold text-center my-7">
+			<div className="text-sm font-extrabold text-center my-7">
 				<span className="bg-clip-text text-gray-300">Hari, Tanggal :</span>
 				<p className="bg-clip-text font-medium text-transparent bg-gradient-to-r from-white to-violet-500">
 					Jumat, 5 Mei 2023
 				</p>
 			</div>
-			<div className="text-md font-extrabold text-center my-7">
+			<div className="text-sm font-extrabold text-center my-7">
 				<span className="bg-clip-text text-gray-300">
 					Akad & Resepsi Pernikahan :
 				</span>
@@ -20,7 +20,7 @@ function Event() {
 					13:30 - 16:00 WIB
 				</p>
 			</div>
-			<div className="text-md font-extrabold text-center my-7">
+			<div className="text-sm font-extrabold text-center my-7">
 				<span className="bg-clip-text text-gray-300">Bertempat di :</span>
 
 				<p className="bg-clip-text font-medium text-transparent bg-gradient-to-r from-white to-violet-500">
@@ -40,7 +40,7 @@ function Event() {
 					Lihat Lokasi
 				</a>
 			</div>
-			<div className="text-md text-center mb-7 font-normal text-gray-300 leading-relaxed mt-20">
+			<div className="text-sm text-center mb-7 font-normal text-gray-300 leading-relaxed mt-20">
 				Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
 				Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restu kepada
 				kedua mempelai
@@ -64,7 +64,7 @@ function Event() {
 				</svg>
 			</div>
 			<div className="mb-8">
-				<p className="bg-clip-text text-md mb-3 font-medium text-gray-300">
+				<p className="bg-clip-text text-sm mb-3 font-medium text-gray-300">
 					Turut berbahagia, segenap keluarga besar
 				</p>
 			</div>

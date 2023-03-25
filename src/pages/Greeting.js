@@ -4,13 +4,13 @@ const Greeting = ({ submitData, data }) => {
 	const [comment, setComment] = useState("");
 	return (
 		<section className="bg-gray-300 dark:bg-gray-900 py-8 lg:py-16">
-			<div className="max-w-2xl mx-auto px-20 bg-neutral-800 py-20 rounded-xl">
+			<div className="max-w-2xl mx-auto px-5 bg-neutral-800 py-10 rounded-xl">
 				<div className="flex justify-between items-center mb-6">
-					<h2 className="text-lg lg:text-2xl font-bold text-gray-300 dark:text-white">
+					<h2 className="text-lg lg:text-xl font-bold text-gray-300 dark:text-white">
 						Ucapan
 					</h2>
 				</div>
-				<div className="py-2 px-4 mb-4 bg-neutral-900 rounded-lg rounded-t-lg border border-gray-700 dark:bg-gray-800 dark:border-gray-700 hover:border-gray-500">
+				<div className="py-2 px-4 mb-4 bg-neutral-900 rounded-lg rounded-t-lg border border-gray-700 dark:bg-gray-800 dark:border-gray-700 hover:border-gray-500 text-sm">
 					<label for="comment" className="sr-only">
 						Your comment
 					</label>
@@ -40,12 +40,14 @@ const Greeting = ({ submitData, data }) => {
 					<article class="mt-2 p-2 mb-2 border-b-2 border-neutral-700">
 						<footer class="flex justify-between items-center mb-2">
 							<div class="flex items-center">
-								<p class="inline-flex items-center mr-3 text-base text-violet-200 dark:text-white">
+								<p class="inline-flex items-center mr-3 text-sm text-violet-200 dark:text-white">
 									{row.name}
 								</p>
 							</div>
 						</footer>
-						<p className="text-gray-300 dark:text-gray-400">{row.comment}</p>
+						<p className="text-gray-300 dark:text-gray-400 text-xs">
+							{row.comment}
+						</p>
 					</article>
 				))}
 			</div>

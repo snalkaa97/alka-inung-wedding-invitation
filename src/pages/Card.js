@@ -5,7 +5,7 @@ import logo from "../images/logo.png";
 function Card({ to }) {
 	return (
 		<div className="min-h-screen bg-gray-300 py-20 px-10">
-			<div className="flex flex-col justify-center max-w-xs mx-auto bg-gray-200 shadow-xl rounded-xl py-12 px-12 ">
+			<div className="flex flex-col justify-center max-w-xs mx-auto bg-gray-200 shadow-xl rounded-xl py-12 px-35 ">
 				<div className="text-center mt-5">
 					<span className="text-md sm:text-base font-bold text-brown-300">
 						Undangan Pernikahan
@@ -13,7 +13,7 @@ function Card({ to }) {
 				</div>
 				<div className="">
 					<img
-						className="w-50 mx-auto rounded-full drop-shadow-sm"
+						className="w-80 mx-auto rounded-full drop-shadow-sm"
 						src={logo}
 						alt="profile sc"
 					/>
