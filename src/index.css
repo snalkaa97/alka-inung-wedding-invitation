@@ -3,6 +3,9 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap");
 
+.bg-invitation {
+	width: 100%;
+}
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -20,6 +20,9 @@ module.exports = {
 				// 'brown': '#E6D0DE',
 				// 'choco': '#C7998C',
 			},
+			backgroundImage: {
+				invitation: "url('../public/background-alka-inung.png')",
+			},
 		},
 	},
 	plugins: [],
