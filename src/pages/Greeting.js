@@ -3,7 +3,7 @@ import { useState } from "react";
 const Greeting = ({ submitData, data, to }) => {
 	const [comment, setComment] = useState("");
 	return (
-		<section className="bg-white py-8 lg:py-16">
+		<section className="bg-white py-8 m-2">
 			<div className="max-w-2xl mx-auto bg-white py-2 rounded-xl">
 				<div className="flex justify-between items-center mb-6">
 					<h2 className="text-lg lg:text-xl font-bold text-slate-600">

@@ -3,11 +3,14 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap");
 
-body {
+.bg-invitation {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 	background-attachment: scroll;
-	background-size: 1900px 1104px;
-	overflow: -moz-scrollbars-vertical;
-	overflow-y: scroll;
 }
 /* body {
   margin: 0;
