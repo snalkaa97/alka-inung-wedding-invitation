@@ -3,6 +3,12 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap");
 
+body {
+	background-attachment: scroll;
+	background-size: 1900px 1104px;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+}
 /* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
