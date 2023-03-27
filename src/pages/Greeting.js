@@ -52,7 +52,7 @@ const Greeting = ({ submitData, data, to }) => {
 								</p>
 							</div>
 						</footer>
-						<p className="text-gray-300 dark:text-slate-500 text-xs">
+						<p className="text-gray-300 dark:text-slate-600 text-xs">
 							{row.comment}
 						</p>
 					</article>
