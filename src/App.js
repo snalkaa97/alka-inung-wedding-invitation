@@ -11,11 +11,9 @@ import {
 	useSearchParams,
 } from "react-router-dom";
 import { useEffect, useState } from "react";
+import apiClient from "./services/apiClient";
 
 function App() {
-	// let [searchParams, setSearchParams] = useSearchParams();
-	// const to = searchParams.get("to");
-	// console.log(to);
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -28,20 +26,26 @@ function App() {
 const Pages = () => {
 	let [searchParams, setSearchParams] = useSearchParams();
 	const [data, setData] = useState([]);
-	const submitData = (comment) => {
-		setData([
-			...data,
-			{
-				id: (Math.random() + 1).toString(36).substring(7),
-				name: to,
-				comment,
-			},
-		]);
+	const submitData = async (comment) => {
+		await apiClient.post("/api/attendance", {
+			name: to,
+			comment: comment,
+		});
+		getData();
 	};
 	const to = searchParams.get("to");
 	useEffect(() => {
-		console.log(data);
-	}, [to, data]);
+		(async () => {
+			await apiClient.get("/api/attendance").then((response) => {
+				setData(response.data.data);
+			});
+		})();
+	}, []);
+	useEffect(() => {}, [to, data]);
+	const getData = async () => {
+		const attendances = await apiClient.get("/api/attendance");
+		setData(attendances.data.data);
+	};
 	return (
 		<div className="min-h-screen overflow-x-auto bg-invitation bg-no-repeat bg-fixed bg-contain bg-center">
 			<Card to={to} />

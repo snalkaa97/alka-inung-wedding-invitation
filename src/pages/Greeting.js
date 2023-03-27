@@ -13,7 +13,7 @@ const Greeting = ({ submitData, data, to }) => {
 				{to && (
 					<>
 						<div className="py-2 px-4 mb-4 rounded-lg bg-gray-100 rounded-t-lg border border-gray-200 hover:border-gray-300 text-sm">
-							<label for="comment" className="sr-only">
+							<label htmlFor="comment" className="sr-only">
 								Your comment
 							</label>
 							<textarea
@@ -41,10 +41,13 @@ const Greeting = ({ submitData, data, to }) => {
 					</>
 				)}
 				{data?.map((row) => (
-					<article class="mt-2 p-2 mb-2 border-b-2 border-gray-100">
-						<footer class="flex justify-between items-center mb-2">
-							<div class="flex items-center">
-								<p class="inline-flex items-center mr-3 text-sm font-medium text-slate-600 ">
+					<article
+						className="mt-2 p-2 mb-2 border-b-2 border-gray-100"
+						key={row._id}
+					>
+						<footer className="flex justify-between items-center mb-2">
+							<div className="flex items-center">
+								<p className="inline-flex items-center mr-3 text-sm font-medium text-slate-600 ">
 									{row.name}
 								</p>
 							</div>
