@@ -43,7 +43,7 @@ const Pages = () => {
 		console.log(data);
 	}, [to, data]);
 	return (
-		<div className="min-h-screen overflow-x-auto bg-invitation bg-no-repeat bg-contain bg-center bg-fixed">
+		<div className="min-h-screen overflow-x-auto bg-invitation bg-no-repeat bg-fixed bg-contain overflow-auto bg-center">
 			<Card to={to} />
 			{/* <Home /> */}
 			<Couple />
