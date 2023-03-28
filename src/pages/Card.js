@@ -21,7 +21,7 @@ function Card({ to }) {
 		<div className="py-20 px-10">
 			<div className="flex flex-row-reverse">
 				<div className="fixed bottom-0 mb-10">
-					<div className="px-5 my-100"></div>
+					<div className="px-3"></div>
 					{!isPlaying && (
 						<svg
 							className="stroke-slate-600 hover:stroke-slate-700"
