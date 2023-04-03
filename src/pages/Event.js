@@ -1,6 +1,6 @@
 import React from "react";
 
-function Event() {
+function Event({ isInvite, sesi }) {
 	return (
 		<div className="py-16 px-3">
 			<div className="flex flex-col justify-center max-w-sm mx-auto rounded-xl py-12 px-35 ">
@@ -14,13 +14,39 @@ function Event() {
 						</p>
 					</div>
 					<div className="text-sm text-center my-7">
-						<span className="bg-clip-text text-slate-600">
-							Akad & Resepsi Pernikahan :
-						</span>
+						{sesi === "1" && (
+							<>
+								<span className="bg-clip-text text-slate-600">
+									Akad & Resepsi Pernikahan :
+								</span>
 
-						<p className="bg-clip-text font-medium text-slate-600">
-							13:30 - 16:00 WIB
-						</p>
+								<p className="bg-clip-text font-medium text-slate-600">
+									13:30 - 15:30 WIB
+								</p>
+							</>
+						)}
+						{sesi === "2" && (
+							<>
+								<span className="bg-clip-text text-slate-600">
+									Resepsi Pernikahan :
+								</span>
+
+								<p className="bg-clip-text font-medium text-slate-600">
+									15:30 - 17:30 WIB
+								</p>
+							</>
+						)}
+						{!sesi && (
+							<>
+								<span className="bg-clip-text text-slate-600">
+									Akad & Resepsi Pernikahan :
+								</span>
+
+								<p className="bg-clip-text font-medium text-slate-600">
+									13:30 - 17:30 WIB
+								</p>
+							</>
+						)}
 					</div>
 					<div className="text-sm text-center my-7">
 						<span className="bg-clip-text text-slate-600">Bertempat di :</span>
@@ -43,9 +69,9 @@ function Event() {
 						</a>
 					</div>
 					<div className="text-sm text-center mb-7 font-normal text-slate-600 leading-relaxed mt-20">
-						Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
-						Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restu
-						kepada kedua mempelai
+						Merupakan suatu kehormatan dan kebahagiaan bagi kami{" "}
+						{isInvite ? "apabila Bapak/Ibu/Saudara/i berkenan hadir" : ""} untuk
+						memberikan do'a restu kepada kedua mempelai
 					</div>
 					<div className="">
 						<svg

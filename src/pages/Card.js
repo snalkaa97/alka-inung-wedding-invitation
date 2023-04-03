@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import logo from "../images/logo.png";
 import perahukertas from "../audio/perahukertas.mp3";
 
-function Card({ to }) {
+function Card({ to, isInvite }) {
 	const song = new Audio(perahukertas);
 	const [isPlaying, setIsPlaying] = useState(false);
 	// useEffect(() => {}, [isPlaying]);
@@ -50,7 +50,7 @@ function Card({ to }) {
 			<div className="flex flex-col justify-center max-w-xs mx-auto  shadow-xl rounded-xl py-12 px-35 ">
 				<div className="text-center mt-5">
 					<span className="text-md sm:text-base font-bold text-brown-300">
-						Undangan Pernikahan
+						{isInvite ? "Undangan " : null}Pernikahan
 					</span>
 				</div>
 				<div className="">

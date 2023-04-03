@@ -25,6 +25,7 @@ function App() {
 
 const Pages = () => {
 	let [searchParams, setSearchParams] = useSearchParams();
+	let [isInvite, setIsInvite] = useState(false);
 	const [data, setData] = useState([]);
 	const submitData = async (comment) => {
 		await apiClient.post("/api/attendance", {
@@ -34,25 +35,37 @@ const Pages = () => {
 		getData();
 	};
 	const to = searchParams.get("to");
+	const invite = searchParams.get("invite");
+	const sesi = searchParams.get("sesi");
 	useEffect(() => {
+		if (invite === "yes") {
+			setIsInvite(true);
+		} else {
+			setIsInvite(false);
+		}
 		(async () => {
 			await apiClient.get("/api/attendance").then((response) => {
 				setData(response.data.data);
 			});
 		})();
 	}, []);
-	useEffect(() => {}, [to, data]);
+	useEffect(() => {}, [to, data, invite, isInvite, sesi]);
 	const getData = async () => {
 		const attendances = await apiClient.get("/api/attendance");
 		setData(attendances.data.data);
 	};
 	return (
 		<div className="min-h-screen overflow-x-auto bg-invitation bg-no-repeat bg-fixed bg-contain bg-center">
-			<Card to={to} />
+			<Card to={to} isInvite={isInvite} />
 			{/* <Home /> */}
 			<Couple />
-			<Event />
-			<Greeting submitData={submitData} data={data} to={to} />
+			<Event isInvite={isInvite} sesi={sesi} />
+			<Greeting
+				submitData={submitData}
+				data={data}
+				to={to}
+				isInvite={isInvite}
+			/>
 		</div>
 	);
 };
