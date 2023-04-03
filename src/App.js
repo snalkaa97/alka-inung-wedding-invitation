@@ -24,7 +24,7 @@ function App() {
 }
 
 const Pages = () => {
-	let [searchParams, setSearchParams] = useSearchParams();
+	let [searchParams] = useSearchParams();
 	let [isInvite, setIsInvite] = useState(false);
 	const [data, setData] = useState([]);
 	const submitData = async (comment) => {
@@ -38,18 +38,19 @@ const Pages = () => {
 	const invite = searchParams.get("invite");
 	const sesi = searchParams.get("sesi");
 	useEffect(() => {
-		if (invite === "yes") {
-			setIsInvite(true);
-		} else {
-			setIsInvite(false);
-		}
 		(async () => {
 			await apiClient.get("/api/attendance").then((response) => {
 				setData(response.data.data);
 			});
 		})();
 	}, []);
-	useEffect(() => {}, [to, data, invite, isInvite, sesi]);
+	useEffect(() => {
+		if (invite === "yes") {
+			setIsInvite(true);
+		} else {
+			setIsInvite(false);
+		}
+	}, [to, data, isInvite, sesi, invite]);
 	const getData = async () => {
 		const attendances = await apiClient.get("/api/attendance");
 		setData(attendances.data.data);

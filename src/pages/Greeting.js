@@ -29,7 +29,7 @@ const Greeting = ({ submitData, data, to }) => {
 						<button
 							type="submit"
 							onClick={() => {
-								if (comment != "") {
+								if (comment !== "") {
 									setComment("");
 									submitData(comment);
 								}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import logo from "../images/logo.png";
 import perahukertas from "../audio/perahukertas.mp3";
 

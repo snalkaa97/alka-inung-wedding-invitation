@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from "avataaars";
 
 function Couple() {
 	return (
