@@ -1,10 +1,8 @@
 import { useState } from "react";
 import logo from "../images/logo.png";
 import perahukertas from "../audio/perahukertas2.mp3";
-import { useScrollTo } from "react-use-window-scroll";
 
 function Card({ to, isInvite }) {
-	const scrollTo = useScrollTo();
 	const song = new Audio(perahukertas);
 	const [isPlaying, setIsPlaying] = useState(false);
 	// useEffect(() => {}, [isPlaying]);
