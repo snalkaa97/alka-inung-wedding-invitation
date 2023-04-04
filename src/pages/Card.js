@@ -1,8 +1,10 @@
 import { useState } from "react";
 import logo from "../images/logo.png";
-import perahukertas from "../audio/perahukertas.mp3";
+import perahukertas from "../audio/perahukertas2.mp3";
+import { useScrollTo } from "react-use-window-scroll";
 
 function Card({ to, isInvite }) {
+	const scrollTo = useScrollTo();
 	const song = new Audio(perahukertas);
 	const [isPlaying, setIsPlaying] = useState(false);
 	// useEffect(() => {}, [isPlaying]);
@@ -72,44 +74,6 @@ function Card({ to, isInvite }) {
 						</div>
 					)}
 				</div>
-			</div>
-
-			<div className="bg-white-700 text-sm text-slate-600 text-center inset-x-0 bottom-0 p-9">
-				<svg
-					onClick={() => {
-						window.scroll({
-							top: 800,
-							behavior: "smooth",
-						});
-					}}
-					xmlns="http://www.w3.org/2000/svg"
-					className="icon icon-tabler icon-tabler-arrow-down-circle mx-auto mt-2 animate-bounce"
-					width="32"
-					height="32"
-					viewBox="0 0 24 24"
-					strokeWidth="1.5"
-					stroke="#2c3e50"
-					fill="none"
-					strokeLinecap="round"
-					strokeLinejoin="round"
-				>
-					<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-					<circle cx="12" cy="12" r="9" />
-					<line x1="8" y1="12" x2="12" y2="16" />
-					<line x1="12" y1="8" x2="12" y2="16" />
-					<line x1="16" y1="12" x2="12" y2="16" />
-				</svg>
-				<button
-					onClick={() => {
-						window.scroll({
-							top: 800,
-							behavior: "smooth",
-						});
-					}}
-					className="text-neutral-800 opacity-90 "
-				>
-					Scroll Down
-				</button>
 			</div>
 		</div>
 	);

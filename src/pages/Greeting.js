@@ -7,7 +7,7 @@ const Greeting = ({ submitData, data, to }) => {
 			<div className="max-w-2xl mx-auto bg-white py-2 rounded-xl">
 				<div className="flex justify-between items-center mb-6">
 					<h2 className="text-lg lg:text-xl font-bold text-slate-600">
-						Ucapan
+						Doa & Ucapan
 					</h2>
 				</div>
 				{to && (

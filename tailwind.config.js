@@ -21,7 +21,7 @@ module.exports = {
 				// 'choco': '#C7998C',
 			},
 			backgroundImage: {
-				invitation: "url('../public/background-alka-inung.png')",
+				invitation: "url('../public/background-alka-inung2.png')",
 			},
 		},
 	},
