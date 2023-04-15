@@ -1,52 +1,8 @@
-import { useState } from "react";
 import logo from "../images/logo.png";
-import perahukertas from "../audio/perahukertas2.mp3";
 
 function Card({ to, isInvite }) {
-	const song = new Audio(perahukertas);
-	const [isPlaying, setIsPlaying] = useState(false);
-	// useEffect(() => {}, [isPlaying]);
-
-	const playPause = () => {
-		setIsPlaying(!isPlaying);
-		if (isPlaying) {
-			console.log("Paused");
-			song.pause();
-		} else {
-			song.play();
-		}
-	};
-
 	return (
 		<div className="py-20 px-10">
-			<div className="flex flex-row-reverse">
-				<div className="fixed bottom-0 mb-10">
-					<div className="px-3"></div>
-					{!isPlaying && (
-						<svg
-							className="stroke-slate-600 hover:stroke-slate-700"
-							onClick={() => playPause()}
-							fill="none"
-							stroke="currentColor"
-							strokeWidth={1.5}
-							viewBox="0 0 24 24"
-							xmlns="http://www.w3.org/2000/svg"
-							aria-hidden="true"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-							/>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								d="M15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.327l5.603 3.112z"
-							/>
-						</svg>
-					)}
-				</div>
-			</div>
 			<div className="flex flex-col justify-center max-w-xs mx-auto  shadow-xl rounded-xl py-12 px-35 ">
 				<div className="text-center mt-5">
 					<span className="text-md sm:text-base font-bold text-brown-300">

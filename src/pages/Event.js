@@ -32,7 +32,7 @@ function Event({ isInvite, sesi }) {
 								</span>
 
 								<p className="bg-clip-text font-medium text-slate-600">
-									15:30 - 17:30 WIB
+									16:00 - 17:30 WIB
 								</p>
 							</>
 						)}
