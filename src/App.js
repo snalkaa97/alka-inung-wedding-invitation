@@ -45,9 +45,7 @@ const Pages = () => {
 
 	const openUndangan = () => {
 		setIsOpen(!isOpen);
-		setTimeout(() => {
-			song.play();
-		}, 1000);
+		song.play();
 	};
 
 	useEffect(() => {
