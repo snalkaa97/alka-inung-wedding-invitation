@@ -48,7 +48,7 @@ const Greeting = ({ submitData, data, to }) => {
 						<footer className="flex justify-between items-center mb-2">
 							<div className="flex items-center">
 								<p className="inline-flex items-center mr-3 text-sm font-medium text-slate-600 ">
-									{row.name}
+									{row.name.replace(/Bpk|Ibu/gi, "")}
 								</p>
 							</div>
 						</footer>
